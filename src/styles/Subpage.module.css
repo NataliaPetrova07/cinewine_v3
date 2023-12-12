@@ -1,0 +1,425 @@
+.main {
+  padding: 0 2rem;
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin-top: -5rem;
+}
+
+.subpage_hero {
+  margin-bottom: 5rem;
+  margin-top: 10rem;
+}
+
+.aboutdisplay {
+  margin-left: -2rem;
+}
+
+.contactdisplay {
+  margin-left: -5rem;
+}
+
+.about_contentflex,
+.valuesgrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.valuesgrid {
+  margin-bottom: 5rem;
+}
+
+.theteam,
+.theteamcontent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.faq_section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+
+.contact_links {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.social_links {
+  display: flex;
+  gap: 2rem;
+}
+
+.contactform fieldset {
+  border: none;
+  padding: 1rem 0;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contactform input,
+.contactform textarea {
+  padding: 0.5rem 0;
+  border: none;
+  border-bottom: 1px solid var(--n-500);
+  background-color: transparent;
+  margin-bottom: 2rem;
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  color: var(--n-700);
+}
+
+.message::placeholder {
+  font-size: 1rem;
+  color: var(--n-500);
+}
+
+.contactform label {
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.contactform button {
+  width: 100%;
+}
+
+.message {
+  height: auto;
+  max-height: 200px;
+  min-height: 35px;
+  width: 100%;
+  resize: vertical;
+}
+
+.event_nr,
+.event_date {
+  font-family: var(--secondary-font);
+  font-size: 2.488rem;
+  font-weight: 700;
+  letter-spacing: 1.72px;
+  text-transform: uppercase;
+  color: var(--n-300);
+  text-shadow: -1px -1px 0 var(--n-700), 1px -1px 0 var(--n-700), -1px 1px 0 var(--n-700), 1px 1px 0 var(--n-700);
+}
+
+.event_details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.abstract {
+  margin: 3rem 0;
+}
+
+.moviename,
+.movie_img {
+  margin-bottom: 2rem;
+}
+
+.long_description {
+  margin-top: 2rem;
+}
+
+.movie_info {
+  margin-top: 1rem;
+}
+
+.event_group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.event_group > div :nth-child(1) {
+  margin-bottom: 1rem;
+}
+
+.single_evt_display {
+  margin-right: -10vw;
+  margin-bottom: 2rem;
+}
+
+.contribute_display {
+  margin-left: -10vw;
+  margin-bottom: 14rem;
+  margin-top: -21rem;
+}
+.contribute_img {
+  margin-top: 2rem;
+}
+.contribute_info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+.open_positions {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 5rem;
+  margin-top: 3rem;
+}
+.open_positions h4 {
+  margin-bottom: 1rem;
+}
+.contribute_form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media only screen and (min-width: 768px) {
+  .main {
+    padding: 0 100px;
+    margin-top: -9rem;
+  }
+  .aboutdisplay,
+  .contactdisplay {
+    margin-right: 20vw;
+    margin-left: -15vw;
+  }
+  .theteam {
+    margin-top: 5rem;
+  }
+  .theteamcontent {
+    flex-direction: row;
+    justify-content: end;
+  }
+  .faq_section {
+    margin: 10rem 0;
+  }
+  .contact_links {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .contactform fieldset {
+    margin-top: 5rem;
+  }
+  .event_details {
+    flex-direction: row;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+  .single_evt_display {
+    margin-right: -15vw;
+    margin-left: 20vw;
+  }
+  .contribute_display {
+    margin-left: -15vw;
+    margin-right: 20vw;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .main {
+    padding: 0 150px;
+  }
+  .subpage_hero {
+    margin-top: 10rem;
+  }
+  .about_contentflex,
+  .valuesgrid,
+  .theteamcontent,
+  .faq_section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .about_contentflex h1,
+  .about_contentflex p,
+  .faq_section > div {
+    grid-column: 2 / span 2;
+  }
+  .theteamcontent > div:nth-child(1) {
+    grid-column: 2 / span 1;
+  }
+  .valuesgrid {
+    grid-column: 1 / span 3;
+    margin-top: 5rem;
+  }
+  .main.contact_page {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    margin-top: 0;
+    gap: 8rem;
+  }
+  .contactdisplay {
+    margin-right: 0;
+    margin-left: -20vw;
+  }
+  .about_content {
+    margin-top: 0;
+  }
+  .single_evt_display {
+    margin-right: -16vw;
+    margin-left: 20vw;
+  }
+  .event_details,
+  .subpage_hero h2 {
+    max-width: 45vw;
+  }
+  .evt_content .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .evt_content .grid :nth-child(2),
+  .evt_content .grid :nth-child(3) {
+    grid-column: 2 / span 1;
+    grid-row: 1;
+  }
+  .evt_content .grid > p {
+    grid-column: 1 / span 2;
+  }
+
+  .long_description,
+  .movie_img {
+    margin: 0;
+  }
+  .event_group {
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: end;
+  }
+  .contribute_display {
+    margin-left: -18vw;
+    margin-right: 20vw;
+    margin-bottom: 10rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .main {
+    padding: 0 200px;
+  }
+  .about_content {
+    margin-top: 5rem;
+  }
+  .evt_content {
+    margin: 10rem 0 10rem 15vw;
+  }
+  .event_group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+    gap: 16px;
+    margin-bottom: 15rem;
+  }
+  .event_group :nth-child(1) {
+    grid-column: 2 / span 1;
+  }
+  .movie_info {
+    margin-top: 2rem;
+  }
+  .contribute_display {
+    margin-left: -16vw;
+    margin-top: -35rem;
+  }
+  .contribute_img,
+  .contribute_info {
+    padding-left: 20vw;
+  }
+  .contribute_info {
+    padding-right: 5vw;
+    margin-top: 20rem;
+    margin-bottom: 10rem;
+  }
+
+  .contribute_info h1 {
+    margin-bottom: 2rem;
+  }
+  .open_positions {
+    flex-direction: row;
+    margin-bottom: 10rem;
+    gap: 3rem;
+  }
+  .contribute_form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .contribute_form div:nth-child(1) {
+    grid-column: 1 / span 2;
+  }
+  .contribute_form div:nth-child(2) {
+    grid-column: 2 / span 1;
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .aboutdisplay {
+    margin-right: 30vw;
+    margin-left: -10vw;
+  }
+  .main {
+    margin-top: 0;
+  }
+  .about_contentflex,
+  .valuesgrid,
+  .theteamcontent,
+  .faq_section {
+    gap: 3rem;
+  }
+  .main.contact_page {
+    grid-template-columns: 1fr 800px;
+    gap: 10rem;
+  }
+  .contactdisplay {
+    margin-left: -10vw;
+  }
+  .about_content {
+    margin-top: 10rem;
+  }
+  .single_evt_display {
+    margin-right: -10vw;
+    margin-left: 28vw;
+  }
+  .event_details,
+  .subpage_hero h2 {
+    max-width: 25vw;
+  }
+  .evt_content {
+    margin: 20rem 0 15rem 25vw;
+  }
+  .event_group {
+    margin-bottom: 20rem;
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  .evt_content .grid :nth-child(2),
+  .evt_content .grid :nth-child(3),
+  .evt_content .grid :nth-child(4) {
+    grid-column: 2 / span 1;
+    grid-row: 1;
+  }
+  .long_description {
+    margin-top: 14rem;
+  }
+  .contribute_display {
+    margin-left: -10vw;
+    margin-top: -50rem;
+  }
+  .contribute_img,
+  .contribute_info {
+    padding-left: 30vw;
+    padding-bottom: 10rem;
+  }
+  .open_positions {
+    margin-bottom: 20rem;
+  }
+  .contribute_form {
+    grid-template-columns: 2fr 1fr;
+  }
+}
