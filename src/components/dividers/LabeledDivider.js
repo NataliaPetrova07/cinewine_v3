@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 function LabeledDivider({ label }) {
   return (
     <div>
@@ -10,9 +8,5 @@ function LabeledDivider({ label }) {
     </div>
   );
 }
-
-LabeledDivider.propTypes = {
-  label: PropTypes.string.isRequired,
-};
 
 export default LabeledDivider;
