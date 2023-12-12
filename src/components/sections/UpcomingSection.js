@@ -1,5 +1,5 @@
 import LabeledDivider from "../dividers/LabeledDivider";
-import Christmas from "../display/christmas";
+import Christmas from "../display/Christmas";
 import Link from "next/link";
 
 export default function UpcomingSection() {

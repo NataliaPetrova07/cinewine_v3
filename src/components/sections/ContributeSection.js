@@ -1,5 +1,5 @@
 import LabeledDivider from "../dividers/LabeledDivider";
-import Contribute from "@/components/display/contribute";
+import Contribute from "@/components/display/Contribute";
 import Link from "next/link";
 
 function ContributeSection() {
