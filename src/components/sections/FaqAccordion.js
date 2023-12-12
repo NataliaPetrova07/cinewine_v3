@@ -1,8 +1,6 @@
 import { Collapse } from "antd";
 const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In feugiat rutrum felis non mattis. Morbi id posuere ante. Vestibulum augue felis, pulvinar et venenatis vel, imperdiet viverra tellus. Vestibulum aliquam quam urna, eu mollis augue eleifend sed. 
 `;
 const items = [
   {
