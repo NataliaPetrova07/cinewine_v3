@@ -3,7 +3,6 @@ import styles from "@/styles/Home.module.css";
 import circles from "@/assets/circles.svg";
 import Image from "next/image";
 import Contribute from "@/components/sections/ContributeSection";
-import OutlinedButton from "@/components/buttons/OutlinedButton";
 import UpcomingSection from "@/components/sections/UpcomingSection";
 import PastEventsSection from "@/components/sections/PastEventsSection";
 
