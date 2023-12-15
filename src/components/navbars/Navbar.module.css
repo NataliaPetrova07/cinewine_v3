@@ -50,6 +50,65 @@
   text-decoration: underline;
 }
 
+.menuicon,
+.closeicon {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.Mobilenav .closeicon {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.menuicon:hover {
+  border: none;
+}
+
+.menucontainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 75%;
+  background-color: var(--n-100);
+  transform: translateX(100%);
+  transition: transform 0.8s ease-in-out;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1.2rem 1.5rem 1rem 3rem;
+}
+
+.menuoverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0 0 0 / 15%);
+  display: none;
+  z-index: 900;
+  transform: translateX(0);
+  transition: transform 0.8s ease-in-out;
+}
+
+.burgermenu {
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.burgermenu.open .menucontainer {
+  transform: translateX(0);
+  transition: transform 0.8s ease-in-out;
+}
+
+.burgermenu.open .menuoverlay {
+  display: block;
+  opacity: 1;
+}
+
 @media only screen and (min-width: 1024px) {
   .Desktopnav,
   .Footer {

@@ -38,34 +38,6 @@
 
 /* @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
   }
 
     html {
@@ -185,18 +157,54 @@ button:hover {
   font-weight: 500;
   text-transform: uppercase;
   color: var(--white);
-  width: 100%;
-  height: 350px;
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  padding: 0.5rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.cardImage {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
 }
 
+.card-background {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+.evtnumber {
+  position: absolute;
+  left: 2rem;
+  top: 1rem;
+}
 .evttitle {
-  margin-top: auto;
-  margin-bottom: 140px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover .evttitle {
+  opacity: 1;
 }
 
 .label {
@@ -294,7 +302,22 @@ button:hover {
   .past .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 1px;
+  }
+
+  .card-background {
+    filter: grayscale(100%) brightness(0.7); /* Apply black and white filter */
+    transition: filter 0.3s ease;
+  }
+  .card:hover .card-background {
+    filter: grayscale(0%) brightness(1); /* Adjust the brightness value */
+  }
+  .evttitle {
+    opacity: 0;
+  }
+
+  .card:hover .evttitle {
+    opacity: 1;
   }
 }
 
@@ -337,7 +360,6 @@ button:hover {
 
   .card {
     font-size: 33.18px;
-    height: 400px;
   }
 
   .label {
@@ -357,10 +379,6 @@ button:hover {
 
   .contribute_flex > * {
     grid-column: 2 / span 2;
-  }
-
-  .evttitle {
-    margin-bottom: 150px;
   }
 
   .upcoming {
@@ -388,7 +406,6 @@ button:hover {
   }
   .card {
     font-size: 33.18px;
-    height: 500px;
   }
   .evttitle {
     margin-bottom: 200px;

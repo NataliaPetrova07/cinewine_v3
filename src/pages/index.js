@@ -22,7 +22,9 @@ export default function Home() {
           <div className={styles.description}>
             <h1>Cultivating connections through cinema & wine </h1>
           </div>
-          <OutlinedButton label={"Join the community"} />
+          <a href="https://www.facebook.com/groups/289672311787100" target="_blank" rel="noopener noreferrer" className="link">
+            Join the community
+          </a>
         </div>
         <UpcomingSection />
         <PastEventsSection />

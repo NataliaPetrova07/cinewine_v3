@@ -5,6 +5,7 @@ import LabeledDivider from "@/components/dividers/LabeledDivider";
 import ContributeSection from "@/components/sections/ContributeSection";
 import Image from "next/image";
 import karolina from "@/assets/karolina.png";
+import rahuset from "@/assets/rahuset_2.png";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 
 export default function AboutPage() {
@@ -51,11 +52,13 @@ export default function AboutPage() {
           <div className={styles.theteamcontent}>
             <div>
               <Image src={karolina} alt="portrait of Karolina Curova" height={400} layout="responsive" />
-              <p>Karolína Čurová</p>
+              <h4 className="highlighted">Karolína Čurová</h4>
+              <p>Founder of Cinewine</p>
             </div>
             <div>
-              <Image src={karolina} alt="portrait of Karolina Curova" height={400} layout="responsive" />
-              <p>Råhuset</p>
+              <Image src={rahuset} alt="picture of a building" height={400} layout="responsive" />
+              <h4 className="highlighted">Råhuset</h4>
+              <p>Cinewine's venue in Vesterbro, Copenhagen</p>
             </div>
           </div>
         </section>

@@ -37,6 +37,10 @@
   gap: 2rem;
 }
 
+.theteamcontent h4 {
+  margin-top: 1rem;
+}
+
 .faq_section {
   display: flex;
   flex-direction: column;
