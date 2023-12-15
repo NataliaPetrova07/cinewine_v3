@@ -3,14 +3,15 @@ import ContributeSection from "@/components/sections/ContributeSection";
 import styles from "@/styles/Subpage.module.css";
 import LabeledDivider from "@/components/dividers/LabeledDivider";
 import Image from "next/image";
-import karolina from "@/assets/karolina.png";
 import AnotherChance from "@/components/display/AnotherChance";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import EventCard from "@/components/cards/EventCard";
 
 export default function Single_event() {
   const router = useRouter();
   const evttitle = router.query.single_event;
+  console.log("evttitle:", evttitle);
 
   const [events, setEvents] = useState([]);
 
@@ -39,9 +40,20 @@ export default function Single_event() {
   const runtime = matchedEvent ? matchedEvent.runtime : "";
   const language = matchedEvent ? matchedEvent.language : "";
   const location = matchedEvent ? matchedEvent.location : "";
-  const year = matchedEvent ? matchedEvent.year : "";
   const description = matchedEvent ? matchedEvent.description : "";
   const cast = matchedEvent ? matchedEvent.cast : "";
+
+  const sortedEvents = [...events].sort((a, b) => a.screening_date.localeCompare(b.screening_date)); // or use event_nr for sorting
+
+  const currentIndex = sortedEvents.findIndex((event) => event.event_name === evttitle);
+
+  const previousEvent = sortedEvents[currentIndex - 1];
+  const nextEvent = sortedEvents[currentIndex + 1];
+
+  const previousEventNr = previousEvent ? `${parseInt(previousEvent.event_nr)}` : "";
+  const nextEventNr = nextEvent ? `${parseInt(nextEvent.event_nr)}` : "";
+  const previousEventTitle = previousEvent ? previousEvent.event_name : null;
+  const nextEventTitle = nextEvent ? nextEvent.event_name : null;
 
   return (
     <>
@@ -59,7 +71,7 @@ export default function Single_event() {
           <div className={styles.event_details}>
             <div>
               <h4 className="label">Nr. of event</h4>
-              <h3 className={styles.event_nr}>#{eventNr}</h3>
+              <h3 className={styles.event_nr}>#0{eventNr}</h3>
             </div>
             <div>
               <h4 className="label">Screening date</h4>
@@ -74,7 +86,7 @@ export default function Single_event() {
             <h1 className={styles.moviename}>{movieName}</h1>
           </div>
           <div className={styles.grid}>
-            <Image className={styles.movie_img} src={`/${eventNr}-square.webp`} alt="still from a movie" width={400} height={400} layout="responsive" />
+            <Image className={styles.movie_img} src={`/0${eventNr}-square.webp`} alt="still from a movie" width={400} height={400} layout="responsive" />
             <LabeledDivider label={"Movie info"} />
             <div className={styles.movie_info}>
               <p>Director: {director}</p>
@@ -89,11 +101,11 @@ export default function Single_event() {
         <div className={styles.event_group}>
           <div>
             <LabeledDivider label={"Next event"} />
-            <Image className={styles.movie_img} src={karolina} alt="portrait of Karolina Curova" height={400} layout="responsive" />
+            <EventCard key={nextEventNr} evtnumber={nextEventNr} evttitle={nextEventTitle} />
           </div>
           <div>
             <LabeledDivider label={"Previous event"} />
-            <Image className={styles.movie_img} src={karolina} alt="portrait of Karolina Curova" height={400} layout="responsive" />
+            <EventCard key={previousEventNr} evtnumber={previousEventNr} evttitle={previousEventTitle} />
           </div>
         </div>
         <ContributeSection />
