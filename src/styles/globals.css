@@ -36,14 +36,14 @@
   --divider: 1px solid var(--n-500);
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
   }
 
-    html {
+  html {
     color-scheme: dark;
   }
-} */
+}
 
 * {
   box-sizing: border-box;
