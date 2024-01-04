@@ -2,7 +2,7 @@ import Head from "next/head";
 import Volunteer from "@/components/display/Volunteer";
 import styles from "@/styles/Subpage.module.css";
 import Image from "next/image";
-import volunteer from "@/assets/volunteer.png";
+import volunteer from "@/assets/volunteer.webp";
 import LabeledDivider from "@/components/dividers/LabeledDivider";
 import ContactSection from "@/components/sections/ContactSection";
 

@@ -4,8 +4,8 @@ import styles from "@/styles/Subpage.module.css";
 import LabeledDivider from "@/components/dividers/LabeledDivider";
 import ContributeSection from "@/components/sections/ContributeSection";
 import Image from "next/image";
-import karolina from "@/assets/karolina.png";
-import rahuset from "@/assets/rahuset_2.png";
+import karolina from "@/assets/karolina.webp";
+import rahuset from "@/assets/rahuset_2.webp";
 import FaqAccordion from "@/components/sections/FaqAccordion";
 
 export default function AboutPage() {

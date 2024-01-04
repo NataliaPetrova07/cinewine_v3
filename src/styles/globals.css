@@ -15,6 +15,10 @@
   --n-300: #ebeae9;
   --n-500: #a09e9c;
   --n-700: #0d2329;
+  --n-900: #121616;
+
+  --svg-fill-light: var(--n-700); /* Light mode fill color */
+  --svg-fill-dark: var(--white); /* Dark mode fill color */
 
   /* VIVIDS */
   --merlot-blue: #2248e9;
@@ -34,15 +38,6 @@
 
   /* UI ELEMENTS */
   --divider: 1px solid var(--n-500);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-  }
-
-  html {
-    color-scheme: dark;
-  }
 }
 
 * {
@@ -123,6 +118,10 @@ a {
 
 .link:hover {
   color: var(--merlot-blue);
+}
+
+[data-theme="dark"] .contentContainer .link:hover {
+  color: var(--chardonnay-gold, #ddb716);
 }
 
 .link.center {
@@ -432,5 +431,35 @@ button:hover {
   }
   .contribute_flex {
     grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    color: rgb(var(--n-100));
+    background-color: var(--n-900);
+  }
+
+  .link {
+    color: var(--n-100);
+  }
+
+  .link:hover {
+    color: var(--chardonnay-gold);
+  }
+
+  button {
+    background-color: var(--n-700);
+    border-color: rgb(var(--n-100));
+    border-style: solid;
+  }
+
+  button:hover {
+    color: var(--chardonnay-gold);
+    border-color: var(--chardonnay-gold);
   }
 }

@@ -2,7 +2,7 @@ import Head from "next/head";
 import Sponsor from "@/components/display/Sponsor";
 import styles from "@/styles/Subpage.module.css";
 import Image from "next/image";
-import sponsor from "@/assets/sponsor.png";
+import sponsor from "@/assets/sponsor.webp";
 import LabeledDivider from "@/components/dividers/LabeledDivider";
 import ContactSection from "@/components/sections/ContactSection";
 
