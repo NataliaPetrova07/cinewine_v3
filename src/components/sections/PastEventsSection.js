@@ -1,9 +1,11 @@
+import { useTheme } from "@/contexts/ThemeProvider";
 import React, { useState, useEffect } from "react";
 import LabeledDivider from "../dividers/LabeledDivider";
 import EventCard from "../cards/EventCard";
 import Link from "next/link";
 
 export default function PastEventsSection() {
+  const { appliedTheme } = useTheme();
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
@@ -31,7 +33,7 @@ export default function PastEventsSection() {
           ))}
         </div>
       </div>
-      <div className="link center">
+      <div className={`${appliedTheme === "dark" ? "dark-mode-link" : "light-mode-link"} link center`}>
         <Link href={"/events"}>Explore all</Link>
       </div>
     </>

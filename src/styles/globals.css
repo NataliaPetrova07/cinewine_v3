@@ -116,12 +116,35 @@ a {
   text-transform: uppercase;
 }
 
+.light-mode-link {
+  color: var(--n-700);
+  font-family: var(--primary-font);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing: 0.54px;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+}
+
+.dark-mode-link {
+  color: var(--n-300);
+  font-family: var(--primary-font);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing: 0.54px;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+}
+
+.light-mode-link:hover,
 .link:hover {
   color: var(--merlot-blue);
 }
 
-[data-theme="dark"] .contentContainer .link:hover {
-  color: var(--chardonnay-gold, #ddb716);
+.dark-mode-link:hover {
+  color: var(--chardonnay-gold);
 }
 
 .link.center {
@@ -294,7 +317,6 @@ button:hover {
 }
 
 .collapseText {
-  background-color: var(--n-300);
   font-family: var(--primary-font);
   font-size: 1rem;
 }
@@ -359,7 +381,9 @@ button:hover {
     text-decoration: none;
   }
 
-  .link {
+  .link,
+  .light-mode-link,
+  .dark-mode-link {
     font-size: 1rem;
     line-height: 1.5rem;
   }
@@ -453,7 +477,7 @@ button:hover {
   }
 
   button {
-    background-color: var(--n-700);
+    background-color: var(--n-900);
     border-color: rgb(var(--n-100));
     border-style: solid;
   }
@@ -462,4 +486,8 @@ button:hover {
     color: var(--chardonnay-gold);
     border-color: var(--chardonnay-gold);
   }
+}
+
+.ant-collapse-arrow svg {
+  color: var(--n-500);
 }

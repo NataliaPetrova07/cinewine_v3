@@ -10,7 +10,6 @@ import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 function Desktopnav() {
   const router = useRouter();
   const { toggleDarkMode, appliedTheme } = useTheme();
-  console.log("Dark mode is:", appliedTheme === "dark");
 
   return (
     <div className={styles.Desktopnav}>

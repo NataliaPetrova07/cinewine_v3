@@ -1,3 +1,4 @@
+import { useTheme } from "@/contexts/ThemeProvider";
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import circles from "@/assets/circles.svg";
@@ -7,6 +8,8 @@ import UpcomingSection from "@/components/sections/UpcomingSection";
 import PastEventsSection from "@/components/sections/PastEventsSection";
 
 export default function Home() {
+  const { appliedTheme } = useTheme();
+
   return (
     <>
       <Head>
@@ -21,7 +24,7 @@ export default function Home() {
           <div className={styles.description}>
             <h1>Cultivating connections through cinema & wine </h1>
           </div>
-          <a href="https://www.facebook.com/groups/289672311787100" target="_blank" rel="noopener noreferrer" className="link">
+          <a href="https://www.facebook.com/groups/289672311787100" target="_blank" rel="noopener noreferrer" className={`${appliedTheme === "dark" ? "dark-mode-link" : "light-mode-link"}`}>
             Join the community
           </a>
         </div>

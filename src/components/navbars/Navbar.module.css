@@ -46,6 +46,10 @@
   color: var(--merlot-blue);
 }
 
+.darkmodenavitem:hover {
+  color: var(--chardonnay-gold);
+}
+
 .activeIndicator {
   text-decoration: underline;
 }

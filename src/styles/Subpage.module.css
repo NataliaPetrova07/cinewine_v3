@@ -82,6 +82,11 @@
   color: var(--n-700);
 }
 
+.contactform_dark input,
+.contactform_dark textarea {
+  color: var(--n-100);
+}
+
 .message::placeholder {
   font-size: 1rem;
   color: var(--n-500);

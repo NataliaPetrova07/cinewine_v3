@@ -1,8 +1,10 @@
+import { useTheme } from "@/contexts/ThemeProvider";
 import LabeledDivider from "../dividers/LabeledDivider";
 import Contribute from "@/components/display/Contribute";
 import Link from "next/link";
 
 function ContributeSection() {
+  const { appliedTheme } = useTheme();
   return (
     <>
       <div className="contribute_display">
@@ -16,10 +18,10 @@ function ContributeSection() {
           memories for all.
         </p>
         <div className="buttonsflex">
-          <Link href={"/volunteer"} className="link">
+          <Link href={"/volunteer"} className={`${appliedTheme === "dark" ? "dark-mode-link" : "light-mode-link"}`}>
             volunteer
           </Link>
-          <Link href={"/sponsor"} className="link">
+          <Link href={"/sponsor"} className={`${appliedTheme === "dark" ? "dark-mode-link" : "light-mode-link"}`}>
             sponsor
           </Link>
         </div>

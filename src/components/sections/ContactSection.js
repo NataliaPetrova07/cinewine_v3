@@ -1,7 +1,9 @@
+import { useTheme } from "@/contexts/ThemeProvider";
 import styles from "@/styles/Subpage.module.css";
 import { useRef, useState } from "react";
 
 function ContactSection() {
+  const { appliedTheme } = useTheme();
   const theForm = useRef(null);
   const [formCompleted, setFormCompleted] = useState(false);
 
@@ -42,20 +44,20 @@ function ContactSection() {
         <div className={styles.about_content}>
           <p>Do have a question, a suggestion, or simply want to say hello? Reach out to us by sending an email, a direct message on our social media pages or by filling the form below. We will reply as soon as possible.</p>
           <div className={styles.contact_links}>
-            <a className="link" href="mailto:hello@cinewine.com">
+            <a className={`${appliedTheme === "dark" ? "dark-mode-link" : "light-mode-link"}`} href="mailto:hello@cinewine.com">
               hello@cinewine.com
             </a>
             <div className={styles.social_links}>
               {" "}
-              <a href="https://www.instagram.com/cinewine.cph/" target="_blank" rel="noopener noreferrer" className="link">
+              <a href="https://www.instagram.com/cinewine.cph/" target="_blank" rel="noopener noreferrer" className={`${appliedTheme === "dark" ? "dark-mode-link" : "light-mode-link"}`}>
                 Instagram
               </a>
-              <a href="https://www.facebook.com/cinewinecph" target="_blank" rel="noopener noreferrer" className="link">
+              <a href="https://www.facebook.com/cinewinecph" target="_blank" rel="noopener noreferrer" className={`${appliedTheme === "dark" ? "dark-mode-link" : "light-mode-link"}`}>
                 Facebook
               </a>
             </div>
           </div>
-          <form onSubmit={submitted} ref={theForm} className={styles.contactform}>
+          <form onSubmit={submitted} ref={theForm} className={`${styles.contactform} ${appliedTheme === "dark" ? styles.contactform_dark : ""}`}>
             <fieldset>
               <label htmlFor="name">Full Name</label>
               <input required type="text" name="name" id="name" pattern="[\p{L}\s]+" />
