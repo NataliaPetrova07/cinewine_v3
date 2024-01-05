@@ -30,11 +30,19 @@
   margin-bottom: 5rem;
 }
 
+.valuesgrid p {
+  margin-top: 1rem;
+}
+
 .theteam,
 .theteamcontent {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.theteamcontent p {
+  margin-top: 1rem;
 }
 
 .theteamcontent h4 {

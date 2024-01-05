@@ -53,12 +53,16 @@ export default function AboutPage() {
             <div>
               <Image src={karolina} alt="portrait of Karolina Curova" height={400} layout="responsive" />
               <h4 className="highlighted">Karolína Čurová</h4>
-              <p>Founder of Cinewine</p>
+              <p>
+                Social Entrepreneur and urban culture creator in Copenhagen. Through CineWine Karolina bridges local businesses with their neighbourhood communities while offering accessible opportunities to appreciate indie and foreign cinema. As an
+                artist, musician, DJ and communications specialist, CineWine is one of the multiple ways she makes her mark on the culture scene of the city.
+              </p>
             </div>
             <div>
               <Image src={rahuset} alt="picture of a building" height={400} layout="responsive" />
               <h4 className="highlighted">Råhuset</h4>
-              <p>Cinewine's venue in Vesterbro, Copenhagen</p>
+              <p>Cinewine's venue, located in Vesterbro, Copenhagen, also serves as an ambitious and atmospheric space for new music, alternative expressions, and the cultural upheavals of the times.</p>
+              <p>Address: Onkel Dannys Plads 1-9 1711 Copenhagen V</p>
             </div>
           </div>
         </section>
