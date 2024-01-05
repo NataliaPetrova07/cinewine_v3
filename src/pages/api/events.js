@@ -2,7 +2,7 @@ export default async function handler(req, res) {
   if (req.method === "GET") {
     try {
       const supabaseUrl = "https://hcoygcxhsxjzlfnzgckj.supabase.co";
-      const apiUrl = `${supabaseUrl}/rest/v1/Events`;
+      const apiUrl = `${supabaseUrl}/rest/v1/Events_duplicate`;
 
       const response = await fetch(apiUrl, {
         method: "GET",

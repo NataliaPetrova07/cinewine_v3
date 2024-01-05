@@ -5,7 +5,7 @@ import circles from "@/assets/circles.svg";
 import Image from "next/image";
 import Contribute from "@/components/sections/ContributeSection";
 import UpcomingSection from "@/components/sections/UpcomingSection";
-import PastEventsSection from "@/components/sections/PastEventsSection";
+import HomePastEventsSection from "@/components/sections/HomePastEventsSection";
 
 export default function Home() {
   const { appliedTheme } = useTheme();
@@ -29,7 +29,7 @@ export default function Home() {
           </a>
         </div>
         <UpcomingSection />
-        <PastEventsSection />
+        <HomePastEventsSection />
         <Contribute />
       </main>
     </>
