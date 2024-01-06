@@ -6,7 +6,7 @@ import Link from "next/link";
 function ContributeSection() {
   const { appliedTheme } = useTheme();
   return (
-    <>
+    <div className="section_padding">
       <div className="contribute_display">
         <Contribute />
       </div>
@@ -26,7 +26,7 @@ function ContributeSection() {
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

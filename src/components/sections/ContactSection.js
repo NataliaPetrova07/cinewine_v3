@@ -42,7 +42,7 @@ function ContactSection() {
         </div>
       ) : (
         <div className={styles.about_content}>
-          <p>Do have a question, a suggestion, or simply want to say hello? Reach out to us by sending an email, a direct message on our social media pages or by filling the form below. We will reply as soon as possible.</p>
+          <p>Do you want to sponsor us, volunteer or simply want to say hello? Reach out to us by sending an email, a direct message on our social media pages or by filling the form below. We will reply as soon as possible.</p>
           <div className={styles.contact_links}>
             <a className={`${appliedTheme === "dark" ? "dark-mode-link" : "light-mode-link"}`} href="mailto:hello@cinewine.com">
               hello@cinewine.com
@@ -66,7 +66,9 @@ function ContactSection() {
               <label htmlFor="message">Message</label>
               <textarea required className={styles.message} placeholder="Max. 500 characters" maxLength="500" id="message" name="message"></textarea>
             </fieldset>
-            <button type="submit">Submit</button>
+            <button className={`${appliedTheme === "dark" ? "darkbutton" : "lightbutton"} `} type="submit">
+              Submit
+            </button>
           </form>
         </div>
       )}

@@ -1,8 +1,8 @@
 import { useTheme } from "@/contexts/ThemeProvider";
 import React, { useState, useEffect } from "react";
-import LabeledDivider from "../dividers/LabeledDivider";
 import EventCard from "../cards/EventCard";
 import Link from "next/link";
+import PastEvents from "@/components/display/PastEvents";
 
 export default function HomePastEventsSection() {
   const { appliedTheme } = useTheme();
@@ -33,8 +33,10 @@ export default function HomePastEventsSection() {
 
   return (
     <>
+      <div className="past_display">
+        <PastEvents />
+      </div>
       <div className="past">
-        <LabeledDivider label={"Past events"} />
         <div className="past grid">
           {events.map((event) => (
             <EventCard key={event.id} evtnumber={event.event_nr} evttitle={event.event_name} />

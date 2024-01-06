@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 function EventCard({ evtnumber, evttitle }) {
-  const backgroundImageUrl = `/0${evtnumber}-square.webp`;
+  const backgroundImageUrl = `/${evtnumber}-square.webp`;
 
   return (
     <>

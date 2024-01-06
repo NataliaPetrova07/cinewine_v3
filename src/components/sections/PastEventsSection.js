@@ -1,6 +1,6 @@
 import { useTheme } from "@/contexts/ThemeProvider";
 import React, { useState, useEffect } from "react";
-import LabeledDivider from "../dividers/LabeledDivider";
+import PastEvents from "@/components/display/PastEvents";
 import EventCard from "../cards/EventCard";
 
 export default function PastEventsSection() {
@@ -31,7 +31,9 @@ export default function PastEventsSection() {
   return (
     <>
       <div className="past">
-        <LabeledDivider label={"Past events"} />
+        <div className="past_display">
+          <PastEvents />
+        </div>
         <div id="pastEvents" className="past grid">
           {events.slice(0, visibleEvents).map((event) => (
             <EventCard key={event.id} evtnumber={event.event_nr} evttitle={event.event_name} />
@@ -39,8 +41,10 @@ export default function PastEventsSection() {
         </div>
       </div>
       {visibleEvents < events.length && (
-        <div className={`${appliedTheme === "dark" ? "dark-mode-link" : "light-mode-link"} link center`}>
-          <button onClick={showMore}>Show older events</button>
+        <div className="center">
+          <button className={`${appliedTheme === "dark" ? "darkbutton" : "lightbutton"} `} onClick={showMore}>
+            Show older events
+          </button>
         </div>
       )}
     </>
