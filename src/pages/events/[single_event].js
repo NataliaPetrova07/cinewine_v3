@@ -3,7 +3,7 @@ import ContributeSection from "@/components/sections/ContributeSection";
 import styles from "@/styles/Subpage.module.css";
 import LabeledDivider from "@/components/dividers/LabeledDivider";
 import Image from "next/image";
-import AnotherChance from "@/components/display/AnotherChance";
+import PastEvents from "@/components/display/PastEvents";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import EventCard from "@/components/cards/EventCard";
@@ -66,7 +66,7 @@ export default function Single_event() {
       <main className={`${styles.main}`}>
         <div className={styles.subpage_hero}>
           <div className={styles.single_evt_display}>
-            <AnotherChance />
+            <PastEvents />
           </div>
           <div className={styles.event_details}>
             <div>
@@ -86,7 +86,7 @@ export default function Single_event() {
             <h1 className={styles.moviename}>{movieName}</h1>
           </div>
           <div className={styles.grid}>
-            <Image className={styles.movie_img} src={`/0${eventNr}-square.webp`} alt="still from a movie" width={400} height={400} layout="responsive" />
+            <Image className={styles.movie_img} src={`/${eventNr}-square.webp`} alt="still from a movie" width={400} height={400} layout="responsive" />
             <LabeledDivider label={"Movie info"} />
             <div className={styles.movie_info}>
               <p>Director: {director}</p>

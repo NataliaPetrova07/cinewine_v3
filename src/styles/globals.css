@@ -508,7 +508,6 @@ button:hover {
 .light-mode-link {
   color: var(--n-700);
   font-family: var(--primary-font);
-  font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.5rem;
   letter-spacing: 0.54px;
@@ -519,7 +518,6 @@ button:hover {
 .dark-mode-link {
   color: var(--n-300);
   font-family: var(--primary-font);
-  font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.5rem;
   letter-spacing: 0.54px;
