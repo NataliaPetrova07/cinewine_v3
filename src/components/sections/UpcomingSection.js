@@ -1,6 +1,6 @@
 import { useTheme } from "@/contexts/ThemeProvider";
 import LabeledDivider from "../dividers/LabeledDivider";
-import Christmas from "../display/Christmas";
+import Upcoming from "../display/Upcoming";
 import Link from "next/link";
 
 export default function UpcomingSection() {
@@ -8,7 +8,7 @@ export default function UpcomingSection() {
   return (
     <div className="section_padding">
       <div className="upcoming_display">
-        <Christmas />
+        <Upcoming firstcolor={`${appliedTheme === "dark" ? "#DF9A87" : "#EFDC01"}`} secondcolor={`${appliedTheme === "dark" ? "#8C0868" : "#B68503"}`} />
       </div>
       <div className="upcoming">
         <LabeledDivider label={"11th December / 18:00 - 22:00 Rahuset"} />

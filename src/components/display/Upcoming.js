@@ -1,4 +1,4 @@
-function Christmas() {
+function Christmas({ firstcolor, secondcolor }) {
   return (
     <>
       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1102 327" style={{ enableBackground: "new 0 0 1102 327" }} xmlSpace="preserve">
@@ -6,8 +6,8 @@ function Christmas() {
           .st0{"{"} fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);{"}"}
         </style>
         <radialGradient id="SVGID_1_" cx="639.6111" cy="326.4167" r="639.5043" gradientUnits="userSpaceOnUse">
-          <stop offset="0" style={{ stopColor: "#EFDC01" }} />
-          <stop offset="1" style={{ stopColor: "#B68503" }} />
+          <stop offset="0" style={{ stopColor: firstcolor }} />
+          <stop offset="1" style={{ stopColor: secondcolor }} />
         </radialGradient>
         <path
           className="st0"
