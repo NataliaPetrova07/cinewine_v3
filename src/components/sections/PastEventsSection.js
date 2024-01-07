@@ -2,6 +2,7 @@ import { useTheme } from "@/contexts/ThemeProvider";
 import React, { useState, useEffect } from "react";
 import PastEvents from "@/components/display/PastEvents";
 import EventCard from "../cards/EventCard";
+import AnimatedSection from "../scroll/AnimatedSection";
 
 export default function PastEventsSection() {
   const { appliedTheme } = useTheme();
@@ -31,9 +32,11 @@ export default function PastEventsSection() {
   return (
     <>
       <div className="past">
-        <div className="past_display">
-          <PastEvents />
-        </div>
+        <AnimatedSection direction="left">
+          <div className="past_display">
+            <PastEvents />
+          </div>
+        </AnimatedSection>
         <div id="pastEvents" className="past grid">
           {events.slice(0, visibleEvents).map((event) => (
             <EventCard key={event.id} evtnumber={event.event_nr} evttitle={event.event_name} />

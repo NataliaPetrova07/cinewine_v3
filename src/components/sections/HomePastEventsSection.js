@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import EventCard from "../cards/EventCard";
 import Link from "next/link";
 import PastEvents from "@/components/display/PastEvents";
+import AnimatedSection from "../scroll/AnimatedSection";
+import AnimatedSection2 from "../scroll/AnimatedSection2";
 
 export default function HomePastEventsSection() {
   const { appliedTheme } = useTheme();
@@ -33,19 +35,23 @@ export default function HomePastEventsSection() {
 
   return (
     <>
-      <div className="past_display">
-        <PastEvents />
-      </div>
-      <div className="past">
-        <div className="past grid">
-          {events.map((event) => (
-            <EventCard key={event.id} evtnumber={event.event_nr} evttitle={event.event_name} />
-          ))}
+      <AnimatedSection direction="left">
+        <div className="past_display">
+          <PastEvents />
         </div>
-      </div>
-      <div className={`${appliedTheme === "dark" ? "dark-mode-link" : "light-mode-link"} link center`}>
-        <Link href={"/events/#pastEvents"}>Explore all</Link>
-      </div>
+      </AnimatedSection>
+      <AnimatedSection2>
+        <div className="past">
+          <div className="past grid">
+            {events.map((event) => (
+              <EventCard key={event.id} evtnumber={event.event_nr} evttitle={event.event_name} />
+            ))}
+          </div>
+        </div>
+        <div className={`${appliedTheme === "dark" ? "dark-mode-link" : "light-mode-link"} link center`}>
+          <Link href={"/events/#pastEvents"}>Explore all</Link>
+        </div>
+      </AnimatedSection2>
     </>
   );
 }

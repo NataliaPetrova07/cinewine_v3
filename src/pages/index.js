@@ -1,8 +1,7 @@
 import { useTheme } from "@/contexts/ThemeProvider";
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
-import circles from "@/assets/circles.svg";
-import Image from "next/image";
+import AnimatedSection from "@/components/scroll/AnimatedSection";
 import Contribute from "@/components/sections/ContributeSection";
 import UpcomingSection from "@/components/sections/UpcomingSection";
 import HomePastEventsSection from "@/components/sections/HomePastEventsSection";
@@ -18,27 +17,31 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main}`}>
-        <div className={styles.hero}>
-          <Image className={styles.circles} src={circles} alt="background graphics" width={1515.29} height={1281} />
-          <div className={styles.description}>
-            <h1>Cultivating connections through cinema & wine </h1>
+        <AnimatedSection direction="left">
+          <div className={styles.hero}>
+            {/* <Image className={styles.circles} src={circles} alt="background graphics" width={1515.29} height={1281} /> */}
+            <div className={styles.description}>
+              <h1>Cultivating connections through cinema & wine </h1>
+            </div>
+            <a href="https://www.facebook.com/groups/289672311787100" target="_blank" rel="noopener noreferrer" className={`${appliedTheme === "dark" ? "dark-mode-link" : "light-mode-link"}`}>
+              JOIN THE COMMUNITY on facebook
+              <span className="icon_span">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                  <path
+                    fillRule="evenodd"
+                    d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
+                  />
+                  <path fillRule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+                </svg>
+              </span>
+            </a>
           </div>
-          <a href="https://www.facebook.com/groups/289672311787100" target="_blank" rel="noopener noreferrer" className={`${appliedTheme === "dark" ? "dark-mode-link" : "light-mode-link"}`}>
-            JOIN THE COMMUNITY on facebook
-            <span className="icon_span">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                <path
-                  fillRule="evenodd"
-                  d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
-                />
-                <path fillRule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
-              </svg>
-            </span>
-          </a>
-        </div>
+        </AnimatedSection>
         <UpcomingSection />
         <HomePastEventsSection />
-        <Contribute />
+        <AnimatedSection direction="left">
+          <Contribute />
+        </AnimatedSection>
       </main>
     </>
   );
